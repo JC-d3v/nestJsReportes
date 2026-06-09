@@ -5,21 +5,21 @@ export class Employee {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'varchar', length: 100 })
+  @Column({ length: 100 })
   name: string;
 
-  @Column({ type: 'varchar', length: 50 })
+  @Column({ length: 50 })
   position: string;
 
   @Column({ type: 'date' })
   start_date: Date;
 
-  @Column({ type: 'time' })
+  @Column({ type: 'time', nullable: true })
   work_time: string;
 
   @Column()
   hours_per_day: number;
 
-  @Column({ type: 'varchar', length: 50 })
+  @Column({ length: 50 })
   work_schedule: string;
 }
